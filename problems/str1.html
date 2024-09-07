@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Palindrome</title>
+    <link rel="stylesheet" href="logic_style/prob_style.css">
+</head>
+<body>
+    <div class="heading">
+        <p id="problem_name">Problem Name: Palindrome</p>
+        <p id="problem_desc">Problem Description: A palindrome is a word, string other sequence of character that reads the same backwards as forwards. 
+            <br>For Eample: <br> 
+            <ul>
+                <li>madam</li>
+                <li>racecar</li>
+                <li>malayalam</li>
+            </ul>
+            <br>
+        Your task is find wether the given string is palidrome or not, return true if givem string is palindorme else return false. <br> 
+        All the input string are in lower case.
+        </p>
+    </div>
+    <div class="editor_container">
+        <div id="editor"></div>
+    </div>
+    <div class="code_button">
+        <button id="download_btn">Download Code</button>
+        <button id="coy_btn">Copy code</button>
+        <button><a href="logic_style/online_editor.html">Online Editor</a></button>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="logic_style/prob_script.js"></script>
+    <script>
+        var initialCode = ` //Check Palindrome
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+bool palindrome(string str){
+    int low = 0;
+    int high = str.size()-1;
+    
+    while(low<=high){
+        if(str[low]!=str[high]){
+            return false;
+        }
+        low++;
+        high--;
+    }
+    return true;
+}
+int main(){
+    string str1 = "madam";
+    string str2 = "abcd";
+    cout<<palindrome(str1)<<endl;
+    cout<<palindrome(str2)<<endl;
+    return 0;
+}
+`;
+var editor = ace.edit("editor");
+editor.setValue(initialCode, -1); // -1 moves the cursor to the start
+    
+    </script>
+</body>
+</html>

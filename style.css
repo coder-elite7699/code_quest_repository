@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: #fafafa;
+}
+.heading{
+
+    padding: 10px;
+    padding-left: 80px;
+    background: #00a6e8a1;
+    color: #2b2d42;
+}
+.heading p{
+    font-style: italic;
+}
+
+.problems{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.problems div #heading_prob{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+.problems div ul{
+    display: flex;
+    flex-direction: column;
+}
+.problems div ul li{
+    list-style:decimal;
+    padding: 5px;
+}
+.problems div ul li a{
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 0.01s, ease-out;
+}
+.problems div ul li a:hover{
+    text-decoration: underline;
+}
+@media(max-width:900px){
+    .problems{
+        display: flex;
+        flex-direction: column;
+    }
+    .problems div{
+        margin-top: 10px;
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+}

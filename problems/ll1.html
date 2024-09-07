@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intriduction to Linked List</title>
+    <link rel="stylesheet" href="logic_style/prob_style.css">
+</head>
+<body>
+    <div class="heading">
+        <p id="problem_name">Introduction to Linked List</p>
+        <p id="problem_desc" style="font-style: italic;">
+            What is Linked List: <br>
+            A linked list is a linear data structure that consists of a series of nodes connected by pointers or references. Each node contains data and a pointer/reference to the next node in the list. Unlike arrays, linked lists allow for efficient insertion or removal of elements from any position in the list, as the nodes are not stored contiguously in memory. <br><br>
+            Problem with arrar <br>
+            <ul style="font-style: italic;">
+                <li>Fixed size: The size of array cannot be increased or decreased once declared whereas size of linked list can be increased or descreased</li>
+                <li>Continuous Memory: Arrays require a contiguous block of memory. This can be problematic when dealing with large arrays, as it may be difficult to find a large enough contiguous block of memory to allocate.</li>
+                <li>Space Wastage: Due to statuc in nature lot of space are unused</li>
+            </ul>
+        </p>
+    </div>
+    <div class="editor_container">
+        <div id="editor"></div>
+    </div>
+    <div class="code_button">
+        <button id="download_btn">Download Code</button>
+        <button id="coy_btn">Copy code</button>
+        <button><a href="logic_style/online_editor.html">Online Editor</a></button>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="logic_style/prob_script.js"></script>
+    <script>
+        var initialCode = ` //Creating a node
+#include<iostream>
+using namespace std;
+
+struct node{
+    int data;
+    struct node* next;
+
+
+    node(int val){
+        data = val;
+        next = nullptr;
+    }
+};
+
+int main(){
+    struct node* head = new node(45);
+    cout<<head->data<<endl;
+    return 0;
+}
+`;
+var editor = ace.edit("editor");
+editor.setValue(initialCode, -1); // -1 moves the cursor to the start
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+/*------------------------------Problem name and description----------------------------------------------------*/
+.heading{
+    margin: 10px;
+    padding: 20px;
+}
+.heading #problem_name{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.heading #problem_desc {
+    font-style: italic;
+}
+.heading P{
+    letter-spacing: 1.1px;
+    line-height: 22px;
+}
+
+.editor_container{
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.editor_container #editor{
+    height: 400px;
+    width: 80%;
+    border-radius: 5px;
+}
+.code_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.code_button button{
+    margin: 10pX;
+    padding: 10px;
+    border-radius: 5px;
+}
